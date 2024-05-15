@@ -5,7 +5,7 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-    <div>
+    <div style="text-align: center">
         <h1>Weather</h1>
         <form action="weather" method="post">
             Enter your city: <input type="text" name="city">

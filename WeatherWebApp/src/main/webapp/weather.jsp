@@ -11,8 +11,10 @@
     <title>Weather Web App</title>
 </head>
 <body>
-    <h1>Weather's today:</h1>
-    <h3>Temperature: ${temp}</h3>
-    <h5>${description}</h5>
+<div style="text-align: center">
+    <h1>Weather of ${cityName}:</h1>
+    <h3>Temperature: ${temp} °C</h3>
+    <h3>${description}</h3>
+</div>
 </body>
 </html>

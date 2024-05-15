@@ -39,9 +39,12 @@ public class WeatherServlet extends HttpServlet {
             JSONObject main = (JSONObject) json.get("main");
             JSONArray weatherArr = (JSONArray) json.get("weather");
             JSONObject weather = (JSONObject) weatherArr.get(0);
-            Double temp = (Double) main.get("temp");
+            String cityName = (String) json.get("name");
+            Number tempNum = (Number) main.get("temp");
+            double temp = tempNum.doubleValue();
             String description = (String) weather.get("description");
 
+            request.setAttribute("cityName", cityName);
             request.setAttribute("temp", temp);
             request.setAttribute("description", description);
             request.getRequestDispatcher("weather.jsp").forward(request, response);
